@@ -190,6 +190,10 @@
         self.t1 = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
         [self.view addSubview:self.t1];
     }
+    
+    //reset t1
+    self.t1.text=@"";
+    
     //set aszMathInputView as current keyboard
     self.t1.inputView = [[NSBundle mainBundle] loadNibNamed:@"aszMathInputView" owner:self options:nil][0];
     [((aszMathInputView *)self.t1.inputView) setDelegate:self];
