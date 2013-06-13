@@ -50,13 +50,14 @@
     return YES;
 }
 
+//TODO: if needed add here button actions for kb swiching
 
 - (IBAction)regular:(id)sender {
     [self.delegate insertText:@"ios keyboard"];
 }
 
 - (IBAction)custom:(id)sender {
-     [self.delegate insertText:@"custom keyboard"];
+     [self.delegate insertText:@"aszMathInputView"];
 }
 
 

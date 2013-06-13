@@ -37,10 +37,15 @@
 -(void)mathKeyboardNedded;
 //asz event handelling the input of the standart ios keyboard
 -(void)textFieldDidChange:(id)sender;
+//asz
+-(void)switchToIosKeyboard;
+//asz
+-(void)switchTo:(NSString*)keyboard;
+
 //asz the math field id
 @property (nonatomic,strong) NSString *fid;
 
-
+//asz
 @property (strong, nonatomic) UITextField *t1;
 
 @end
@@ -148,11 +153,11 @@
 */
 
 
-//------------------------------asz custom keyboard----------------------------------------------------------------
+//------------------------------asz custom keyboard hooking  -----------------------------------------------------------
 
 
 
-//asz implemnt this method to cach function called by js
+//asz implemnted this method to cach function called by js (see mathKeyboardNedded(id) js function )
 - (BOOL) webView:(UIWebView*)theWebView shouldStartLoadWithRequest:(NSURLRequest*)request navigationType:(UIWebViewNavigationType)navigationType
 {
     NSString  *requestString=[[request URL] absoluteString];
@@ -161,6 +166,7 @@
         
         // Extract the selector name from the URL
         NSArray *components = [requestString componentsSeparatedByString:@":"];
+        //extract param (the target obj id)
         NSString *function = [components objectAtIndex:1];
         
         self.fid= [components objectAtIndex:2];
@@ -196,40 +202,57 @@
     [self.t1 becomeFirstResponder];
     
 }
-
+//asz sets ios kb as current kb
+-(void)switchToIosKeyboard{
+    
+    self.t1.inputView = nil;
+    
+    [self.t1 reloadInputViews];
+    
+    [self.t1 becomeFirstResponder];
+    
+    [self.t1 addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
+    
+}
 //asz
 - (BOOL)hasText {
 	return YES;
 }
+
+//asz switch to xib with the name keyboard as the curent kb
+-(void)switchTo:(NSString*)keyboard{
+    
+    self.t1.inputView = [[NSBundle mainBundle] loadNibNamed:keyboard owner:self options:nil][0];
+    [((aszMathInputView *)self.t1.inputView) setDelegate:self];
+    
+    [self.t1 removeTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
+    
+    [self.t1 reloadInputViews];
+    
+    [self.t1 becomeFirstResponder];
+}
+
 //asz keyboard input handelling
 - (void)insertText:(NSString *)text {
     
     //set the default ios keyboard
     if([text isEqualToString:@"ios keyboard"]){
         
-        self.t1.inputView = nil;
-        
-        [self.t1 reloadInputViews];
-        
-        [self.t1 becomeFirstResponder];
-        
-        [self.t1 addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
-        
+        [self switchToIosKeyboard];
+
     //set aszMathInputView as the current keyboard
-    }else if([text isEqualToString:@"custom keyboard"]){
+    }else if([text isEqualToString:@"aszMathInputView"]){
+       
+        [self switchTo:@"aszMathInputView"];
         
-        self.t1.inputView = [[NSBundle mainBundle] loadNibNamed:@"aszMathInputView" owner:self options:nil][0];
-	    [((aszMathInputView *)self.t1.inputView) setDelegate:self];
         
-        [self.t1 removeTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
-        
-        [self.t1 reloadInputViews];
-        
-        [self.t1 becomeFirstResponder];
+   //TODO: if needed add more kb's cases here ...
         
    //handle custom keyboard click
     }else{
     
+        //TODO: translate the text (wich is actually the keycode) to somthing usfull
+        //      I'd sugest some kined of map translation ...
         self.t1.text =[self.t1.text stringByAppendingString: text];
     
         [self textFieldDidChange:nil];
