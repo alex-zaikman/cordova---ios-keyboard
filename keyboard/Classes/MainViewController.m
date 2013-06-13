@@ -32,8 +32,13 @@
 
 @interface MainViewController() <UITextInputTraits, UIKeyInput >
 
+
+//asz this function should be called by js to init and pop the keyboard
 -(void)mathKeyboardNedded;
+//asz event handelling the input of the standart ios keyboard
 -(void)textFieldDidChange:(id)sender;
+//asz the math field id
+@property (nonatomic,strong) NSString *fid;
 
 
 @property (strong, nonatomic) UITextField *t1;
@@ -43,6 +48,7 @@
 @implementation MainViewController
 
 @synthesize t1=_t1;
+@synthesize fid=_fid;
 
 - (id)initWithNibName:(NSString*)nibNameOrNil bundle:(NSBundle*)nibBundleOrNil
 {
@@ -141,6 +147,12 @@
 }
 */
 
+
+//------------------------------asz custom keyboard----------------------------------------------------------------
+
+
+
+//asz implemnt this method to cach function called by js
 - (BOOL) webView:(UIWebView*)theWebView shouldStartLoadWithRequest:(NSURLRequest*)request navigationType:(UIWebViewNavigationType)navigationType
 {
     NSString  *requestString=[[request URL] absoluteString];
@@ -151,10 +163,11 @@
         NSArray *components = [requestString componentsSeparatedByString:@":"];
         NSString *function = [components objectAtIndex:1];
         
+        self.fid= [components objectAtIndex:2];
         // Call the given selector
         [self performSelector:NSSelectorFromString(function)];
         
-        // Cancel the location change
+        // Cancel the DOM change
         return NO;
     }
     else
@@ -163,18 +176,19 @@
 
 
 
-
-
+//asz this function should be called by js to init and pop the keyboard
 -(void)mathKeyboardNedded{
    
+    //create ios invisibale testField
     if(!self.t1){
         self.t1 = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
         [self.view addSubview:self.t1];
     }
-    
+    //set aszMathInputView as current keyboard
     self.t1.inputView = [[NSBundle mainBundle] loadNibNamed:@"aszMathInputView" owner:self options:nil][0];
     [((aszMathInputView *)self.t1.inputView) setDelegate:self];
     
+    //set Accessory View
     self.t1.inputAccessoryView = [[NSBundle mainBundle] loadNibNamed:@"aszMathInputAccessoryView" owner:self options:nil][0];
     [((aszMathInputAccessoryView *)self.t1.inputAccessoryView) setDelegate:self];
     
@@ -183,13 +197,14 @@
     
 }
 
-
+//asz
 - (BOOL)hasText {
 	return YES;
 }
-
+//asz keyboard input handelling
 - (void)insertText:(NSString *)text {
     
+    //set the default ios keyboard
     if([text isEqualToString:@"ios keyboard"]){
         
         self.t1.inputView = nil;
@@ -200,6 +215,7 @@
         
         [self.t1 addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
         
+    //set aszMathInputView as the current keyboard
     }else if([text isEqualToString:@"custom keyboard"]){
         
         self.t1.inputView = [[NSBundle mainBundle] loadNibNamed:@"aszMathInputView" owner:self options:nil][0];
@@ -211,27 +227,37 @@
         
         [self.t1 becomeFirstResponder];
         
+   //handle custom keyboard click
     }else{
-        
     
         self.t1.text =[self.t1.text stringByAppendingString: text];
     
-        [self.webView stringByEvaluatingJavaScriptFromString:[[@"document.getElementById('math').value='" stringByAppendingString: self.t1.text ]stringByAppendingString:@"'"]];
+        [self textFieldDidChange:nil];
     }
 }
 
+//asz handle custom delete 
 - (void)deleteBackward {
     
+    self.t1.text =[ self.t1.text substringWithRange:NSMakeRange(0, [self.t1.text length]-1)];
     
+    [self textFieldDidChange:nil];
 }
 
-
+//asz add as listener for ios default keyboard
 -(void)textFieldDidChange:(id)sender
 {
-    [self.webView stringByEvaluatingJavaScriptFromString:[[@"document.getElementById('math').value='" stringByAppendingString: self.t1.text ]stringByAppendingString:@"'"]];
+    NSMutableString *jscommand = [[NSMutableString alloc]init];
+    [jscommand appendString: @"document.getElementById('"];
+    [jscommand appendString: self.fid];
+    [jscommand appendString: @"').value='"];
+    [jscommand appendString: self.t1.text ];
+    [jscommand appendString: @"'"];
+    
+    [self.webView stringByEvaluatingJavaScriptFromString:jscommand];
 }
 
-
+//----------------------------------------------------------------------------------------------------------------------
 
 
 @end

@@ -30,11 +30,11 @@
         
         <script type="text/javascript">
             
-            
-            function mathKeyboardNedded(){
+            //hook into ios to call mathKeyboardNedded 
+            function mathKeyboardNedded(id){
                 
                 var iframe = document.createElement("IFRAME");
-                iframe.setAttribute("src", "js-call:mathKeyboardNedded");
+                iframe.setAttribute("src", "js-call:mathKeyboardNedded:".concat(id));
                 document.documentElement.appendChild(iframe);
                 iframe.parentNode.removeChild(iframe);
                 iframe = null;
@@ -53,7 +53,8 @@
         
         <p id="demo">
         
-        <input type="text" id="math" onclick='mathKeyboardNedded()'></input>
+       
+        <input type="text" id="math" onclick='mathKeyboardNedded("math")'></input>
         
         
         </p>

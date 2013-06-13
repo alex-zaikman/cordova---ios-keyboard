@@ -14,8 +14,6 @@
 @synthesize keyCode=_keyCode;
 
 
-
-
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
@@ -47,7 +45,7 @@
 }
 
 - (void)initializeComponents {
-	
+	//init whatever you need...
 }
 
 

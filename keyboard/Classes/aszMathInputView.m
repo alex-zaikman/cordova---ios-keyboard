@@ -1,6 +1,6 @@
 //
 //  aszMathInputView.m
-//  keyboard
+//  custom keyboard view
 //
 //  Created by alex zaikman on 6/12/13.
 //  Copyright (c) 2013 alex zaikman. All rights reserved.
@@ -35,6 +35,7 @@
 }
 
 - (void)initializeComponents {
+    //init buttons data
 	NSArray *buttons =  [self subviews];
     int i=0;
     for(aszUIButton *button in buttons){
