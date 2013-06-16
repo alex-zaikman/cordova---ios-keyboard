@@ -40,7 +40,7 @@
     int i=0;
     for(aszUIButton *button in buttons){
         button.keyCode = [NSString stringWithFormat:@"key-%d",i];
-         [button setTitle:button.keyCode forState:UIControlStateNormal];
+      //  [button setTitle:button.keyCode forState:UIControlStateNormal];
        
         i++;
     }
