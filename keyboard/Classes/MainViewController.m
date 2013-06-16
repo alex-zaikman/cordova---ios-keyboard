@@ -39,14 +39,14 @@
 -(void)textFieldDidChange:(id)sender;
 //asz
 -(void)switchToIosKeyboard;
-//asz
+//asz swich to keyboard by class nake
 -(void)switchTo:(NSString*)keyboard;
 //asz
 -(BOOL)respondeIfSpecial:(NSString*)text;
 //asz the math field id
 @property (nonatomic,strong) NSString *fid;
 
-//asz
+//asz hidden inner text field 
 @property (strong, nonatomic) UITextField *t1;
 
 
@@ -56,6 +56,7 @@
 
 @implementation MainViewController
 
+//asz
 @synthesize t1=_t1;
 @synthesize fid=_fid;
 
