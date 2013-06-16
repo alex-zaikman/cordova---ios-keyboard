@@ -250,10 +250,10 @@
 			children = (
 				013847FE1769BAC300AC9924 /* aszUIButton.h */,
 				013847FF1769BAC300AC9924 /* aszUIButton.m */,
-				013848061769E0C100AC9924 /* aszMathInputAccessoryView.xib */,
 				01384816176D9AF200AC9924 /* res */,
 				013848071769E0C100AC9924 /* aszMathInputAccessoryView.h */,
 				013848081769E0C100AC9924 /* aszMathInputAccessoryView.m */,
+				013848061769E0C100AC9924 /* aszMathInputAccessoryView.xib */,
 				013847F91769B83E00AC9924 /* aszMathInputView.xib */,
 				013847FA1769B83E00AC9924 /* aszMathInputView.h */,
 				013847FB1769B83E00AC9924 /* aszMathInputView.m */,

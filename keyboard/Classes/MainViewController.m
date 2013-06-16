@@ -271,7 +271,7 @@
         
         [self switchTo:@"aszMathInputView2"];
 
-    }else if([text isEqualToString:@"key-41"]){
+    }else if([text isEqualToString:@"dismiss"]){
         
         //dismiss keyboard
         [self.t1 endEditing:YES];

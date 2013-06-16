@@ -35,14 +35,22 @@
 - (void)initializeComponents {
     //init buttons data s
 	NSArray *buttons =  [self subviews];
-    int i=0;
+   
     for(aszUIButton *button in buttons){
-        button.keyCode = [NSString stringWithFormat:@"key2-%d",i];
-        [button setTitle:button.keyCode forState:UIControlStateNormal];
-        
-        i++;
+        button.keyCode = button.titleLabel.text;
+
     }
     
+}
+- (IBAction)del:(aszUIButton*)sender {
+    
+	if (self.delegate) {
+		[self.delegate deleteBackward];
+	}
+    
+	[[UIDevice currentDevice] playInputClick];
+    
+    NSLog(@"in keyboard: %@ key with code: %@ ",[self class],sender.keyCode);
 }
 
 - (IBAction)inside:(aszUIButton*)sender {
@@ -56,6 +64,8 @@
 	}
     
 	[[UIDevice currentDevice] playInputClick];
+    
+    NSLog(@"in keyboard: %@ key with code: %@ ",[self class],keyCode);
 }
 
 
