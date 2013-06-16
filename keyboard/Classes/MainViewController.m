@@ -41,12 +41,16 @@
 -(void)switchToIosKeyboard;
 //asz
 -(void)switchTo:(NSString*)keyboard;
-
+//asz
+-(BOOL)respondeIfSpecial:(NSString*)text;
 //asz the math field id
 @property (nonatomic,strong) NSString *fid;
 
 //asz
 @property (strong, nonatomic) UITextField *t1;
+
+
+
 
 @end
 
@@ -54,6 +58,9 @@
 
 @synthesize t1=_t1;
 @synthesize fid=_fid;
+
+
+
 
 - (id)initWithNibName:(NSString*)nibNameOrNil bundle:(NSBundle*)nibBundleOrNil
 {
@@ -238,30 +245,47 @@
 
 //asz keyboard input handelling
 - (void)insertText:(NSString *)text {
+
+    if(![self respondeIfSpecial:text]){
+    
+        self.t1.text =[self.t1.text stringByAppendingString: text];
+    
+        [self textFieldDidChange:nil];
+    }
+}
+
+-(BOOL)respondeIfSpecial:(NSString*)text{
     
     //set the default ios keyboard
     if([text isEqualToString:@"ios keyboard"]){
         
         [self switchToIosKeyboard];
 
-    //set aszMathInputView as the current keyboard
+        
+        //set aszMathInputView as the current keyboard
     }else if([text isEqualToString:@"aszMathInputView"]){
-       
+        
         [self switchTo:@"aszMathInputView"];
         
+    }else if([text isEqualToString:@"aszMathInputView2"]){
         
-   //TODO: if needed add more kb's cases here ...
+        [self switchTo:@"aszMathInputView2"];
+
+    }else if([text isEqualToString:@"0"]){
         
-   //handle custom keyboard click
+        //dismiss keyboard
+        [self.t1 endEditing:YES];
+      
+        
+    //default take no action
     }else{
-    
-        //TODO: translate the text (wich is actually the keycode) to somthing usfull
-        //      I'd sugest some kined of map translation ...
-        self.t1.text =[self.t1.text stringByAppendingString: text];
-    
-        [self textFieldDidChange:nil];
+        return NO;
     }
+    
+    //took action 
+    return YES;
 }
+
 
 //asz handle custom delete 
 - (void)deleteBackward {

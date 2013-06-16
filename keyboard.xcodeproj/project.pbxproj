@@ -12,6 +12,33 @@
 		013848001769BAC300AC9924 /* aszUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 013847FF1769BAC300AC9924 /* aszUIButton.m */; };
 		013848091769E0C100AC9924 /* aszMathInputAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 013848061769E0C100AC9924 /* aszMathInputAccessoryView.xib */; };
 		0138480A1769E0C100AC9924 /* aszMathInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 013848081769E0C100AC9924 /* aszMathInputAccessoryView.m */; };
+		01384812176D902700AC9924 /* aszMathInputView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01384811176D902700AC9924 /* aszMathInputView2.xib */; };
+		01384815176D90F700AC9924 /* aszMathInputView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 01384814176D90F700AC9924 /* aszMathInputView2.m */; };
+		01384830176D9B2500AC9924 /* angle.png in Resources */ = {isa = PBXBuildFile; fileRef = 01384817176D9B2500AC9924 /* angle.png */; };
+		01384831176D9B2500AC9924 /* approx.png in Resources */ = {isa = PBXBuildFile; fileRef = 01384818176D9B2500AC9924 /* approx.png */; };
+		01384832176D9B2500AC9924 /* delta.png in Resources */ = {isa = PBXBuildFile; fileRef = 01384819176D9B2500AC9924 /* delta.png */; };
+		01384833176D9B2500AC9924 /* fracture.png in Resources */ = {isa = PBXBuildFile; fileRef = 0138481A176D9B2500AC9924 /* fracture.png */; };
+		01384834176D9B2500AC9924 /* geq.png in Resources */ = {isa = PBXBuildFile; fileRef = 0138481B176D9B2500AC9924 /* geq.png */; };
+		01384835176D9B2500AC9924 /* leq.png in Resources */ = {isa = PBXBuildFile; fileRef = 0138481C176D9B2500AC9924 /* leq.png */; };
+		01384836176D9B2500AC9924 /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = 0138481D176D9B2500AC9924 /* line.png */; };
+		01384837176D9B2500AC9924 /* neq.png in Resources */ = {isa = PBXBuildFile; fileRef = 0138481E176D9B2500AC9924 /* neq.png */; };
+		01384838176D9B2500AC9924 /* parallel.png in Resources */ = {isa = PBXBuildFile; fileRef = 0138481F176D9B2500AC9924 /* parallel.png */; };
+		01384839176D9B2500AC9924 /* perpendicular.png in Resources */ = {isa = PBXBuildFile; fileRef = 01384820176D9B2500AC9924 /* perpendicular.png */; };
+		0138483A176D9B2500AC9924 /* pie.png in Resources */ = {isa = PBXBuildFile; fileRef = 01384821176D9B2500AC9924 /* pie.png */; };
+		0138483B176D9B2500AC9924 /* power.png in Resources */ = {isa = PBXBuildFile; fileRef = 01384822176D9B2500AC9924 /* power.png */; };
+		0138483C176D9B2500AC9924 /* ray.png in Resources */ = {isa = PBXBuildFile; fileRef = 01384823176D9B2500AC9924 /* ray.png */; };
+		0138483D176D9B2500AC9924 /* segment.png in Resources */ = {isa = PBXBuildFile; fileRef = 01384824176D9B2500AC9924 /* segment.png */; };
+		0138483E176D9B2500AC9924 /* shape_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 01384825176D9B2500AC9924 /* shape_circle.png */; };
+		0138483F176D9B2500AC9924 /* shape_doodlee.png in Resources */ = {isa = PBXBuildFile; fileRef = 01384826176D9B2500AC9924 /* shape_doodlee.png */; };
+		01384840176D9B2500AC9924 /* shape_elipse.png in Resources */ = {isa = PBXBuildFile; fileRef = 01384827176D9B2500AC9924 /* shape_elipse.png */; };
+		01384841176D9B2500AC9924 /* shape_rectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 01384828176D9B2500AC9924 /* shape_rectangle.png */; };
+		01384842176D9B2500AC9924 /* shape_triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 01384829176D9B2500AC9924 /* shape_triangle.png */; };
+		01384843176D9B2500AC9924 /* sym_keyboard_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 0138482A176D9B2500AC9924 /* sym_keyboard_delete.png */; };
+		01384844176D9B2500AC9924 /* sym_keyboard_done.png in Resources */ = {isa = PBXBuildFile; fileRef = 0138482B176D9B2500AC9924 /* sym_keyboard_done.png */; };
+		01384845176D9B2500AC9924 /* sym_keyboard_return.png in Resources */ = {isa = PBXBuildFile; fileRef = 0138482C176D9B2500AC9924 /* sym_keyboard_return.png */; };
+		01384846176D9B2500AC9924 /* sym_keyboard_search.png in Resources */ = {isa = PBXBuildFile; fileRef = 0138482D176D9B2500AC9924 /* sym_keyboard_search.png */; };
+		01384847176D9B2500AC9924 /* sym_keyboard_shift.png in Resources */ = {isa = PBXBuildFile; fileRef = 0138482E176D9B2500AC9924 /* sym_keyboard_shift.png */; };
+		01384848176D9B2500AC9924 /* sym_keyboard_space.png in Resources */ = {isa = PBXBuildFile; fileRef = 0138482F176D9B2500AC9924 /* sym_keyboard_space.png */; };
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -80,6 +107,34 @@
 		013848061769E0C100AC9924 /* aszMathInputAccessoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = aszMathInputAccessoryView.xib; sourceTree = "<group>"; };
 		013848071769E0C100AC9924 /* aszMathInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aszMathInputAccessoryView.h; sourceTree = "<group>"; };
 		013848081769E0C100AC9924 /* aszMathInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aszMathInputAccessoryView.m; sourceTree = "<group>"; };
+		01384811176D902700AC9924 /* aszMathInputView2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = aszMathInputView2.xib; sourceTree = "<group>"; };
+		01384813176D90F700AC9924 /* aszMathInputView2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aszMathInputView2.h; sourceTree = "<group>"; };
+		01384814176D90F700AC9924 /* aszMathInputView2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aszMathInputView2.m; sourceTree = "<group>"; };
+		01384817176D9B2500AC9924 /* angle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = angle.png; sourceTree = "<group>"; };
+		01384818176D9B2500AC9924 /* approx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = approx.png; sourceTree = "<group>"; };
+		01384819176D9B2500AC9924 /* delta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delta.png; sourceTree = "<group>"; };
+		0138481A176D9B2500AC9924 /* fracture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fracture.png; sourceTree = "<group>"; };
+		0138481B176D9B2500AC9924 /* geq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = geq.png; sourceTree = "<group>"; };
+		0138481C176D9B2500AC9924 /* leq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leq.png; sourceTree = "<group>"; };
+		0138481D176D9B2500AC9924 /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line.png; sourceTree = "<group>"; };
+		0138481E176D9B2500AC9924 /* neq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = neq.png; sourceTree = "<group>"; };
+		0138481F176D9B2500AC9924 /* parallel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = parallel.png; sourceTree = "<group>"; };
+		01384820176D9B2500AC9924 /* perpendicular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = perpendicular.png; sourceTree = "<group>"; };
+		01384821176D9B2500AC9924 /* pie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pie.png; sourceTree = "<group>"; };
+		01384822176D9B2500AC9924 /* power.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = power.png; sourceTree = "<group>"; };
+		01384823176D9B2500AC9924 /* ray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ray.png; sourceTree = "<group>"; };
+		01384824176D9B2500AC9924 /* segment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = segment.png; sourceTree = "<group>"; };
+		01384825176D9B2500AC9924 /* shape_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shape_circle.png; sourceTree = "<group>"; };
+		01384826176D9B2500AC9924 /* shape_doodlee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shape_doodlee.png; sourceTree = "<group>"; };
+		01384827176D9B2500AC9924 /* shape_elipse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shape_elipse.png; sourceTree = "<group>"; };
+		01384828176D9B2500AC9924 /* shape_rectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shape_rectangle.png; sourceTree = "<group>"; };
+		01384829176D9B2500AC9924 /* shape_triangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shape_triangle.png; sourceTree = "<group>"; };
+		0138482A176D9B2500AC9924 /* sym_keyboard_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sym_keyboard_delete.png; sourceTree = "<group>"; };
+		0138482B176D9B2500AC9924 /* sym_keyboard_done.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sym_keyboard_done.png; sourceTree = "<group>"; };
+		0138482C176D9B2500AC9924 /* sym_keyboard_return.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sym_keyboard_return.png; sourceTree = "<group>"; };
+		0138482D176D9B2500AC9924 /* sym_keyboard_search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sym_keyboard_search.png; sourceTree = "<group>"; };
+		0138482E176D9B2500AC9924 /* sym_keyboard_shift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sym_keyboard_shift.png; sourceTree = "<group>"; };
+		0138482F176D9B2500AC9924 /* sym_keyboard_space.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sym_keyboard_space.png; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -158,17 +213,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01384816176D9AF200AC9924 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				01384817176D9B2500AC9924 /* angle.png */,
+				01384818176D9B2500AC9924 /* approx.png */,
+				01384819176D9B2500AC9924 /* delta.png */,
+				0138481A176D9B2500AC9924 /* fracture.png */,
+				0138481B176D9B2500AC9924 /* geq.png */,
+				0138481C176D9B2500AC9924 /* leq.png */,
+				0138481D176D9B2500AC9924 /* line.png */,
+				0138481E176D9B2500AC9924 /* neq.png */,
+				0138481F176D9B2500AC9924 /* parallel.png */,
+				01384820176D9B2500AC9924 /* perpendicular.png */,
+				01384821176D9B2500AC9924 /* pie.png */,
+				01384822176D9B2500AC9924 /* power.png */,
+				01384823176D9B2500AC9924 /* ray.png */,
+				01384824176D9B2500AC9924 /* segment.png */,
+				01384825176D9B2500AC9924 /* shape_circle.png */,
+				01384826176D9B2500AC9924 /* shape_doodlee.png */,
+				01384827176D9B2500AC9924 /* shape_elipse.png */,
+				01384828176D9B2500AC9924 /* shape_rectangle.png */,
+				01384829176D9B2500AC9924 /* shape_triangle.png */,
+				0138482A176D9B2500AC9924 /* sym_keyboard_delete.png */,
+				0138482B176D9B2500AC9924 /* sym_keyboard_done.png */,
+				0138482C176D9B2500AC9924 /* sym_keyboard_return.png */,
+				0138482D176D9B2500AC9924 /* sym_keyboard_search.png */,
+				0138482E176D9B2500AC9924 /* sym_keyboard_shift.png */,
+				0138482F176D9B2500AC9924 /* sym_keyboard_space.png */,
+			);
+			name = res;
+			sourceTree = "<group>";
+		};
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				013847FE1769BAC300AC9924 /* aszUIButton.h */,
 				013847FF1769BAC300AC9924 /* aszUIButton.m */,
 				013848061769E0C100AC9924 /* aszMathInputAccessoryView.xib */,
+				01384816176D9AF200AC9924 /* res */,
 				013848071769E0C100AC9924 /* aszMathInputAccessoryView.h */,
 				013848081769E0C100AC9924 /* aszMathInputAccessoryView.m */,
 				013847F91769B83E00AC9924 /* aszMathInputView.xib */,
 				013847FA1769B83E00AC9924 /* aszMathInputView.h */,
 				013847FB1769B83E00AC9924 /* aszMathInputView.m */,
+				01384811176D902700AC9924 /* aszMathInputView2.xib */,
+				01384813176D90F700AC9924 /* aszMathInputView2.h */,
+				01384814176D90F700AC9924 /* aszMathInputView2.m */,
 				302D95EE14D2391D003F00A1 /* MainViewController.h */,
 				302D95EF14D2391D003F00A1 /* MainViewController.m */,
 				302D95F014D2391D003F00A1 /* MainViewController.xib */,
@@ -421,6 +512,32 @@
 				30FC414916E50CA1004E6F35 /* icon-72@2x.png in Resources */,
 				013847FC1769B83E00AC9924 /* aszMathInputView.xib in Resources */,
 				013848091769E0C100AC9924 /* aszMathInputAccessoryView.xib in Resources */,
+				01384812176D902700AC9924 /* aszMathInputView2.xib in Resources */,
+				01384830176D9B2500AC9924 /* angle.png in Resources */,
+				01384831176D9B2500AC9924 /* approx.png in Resources */,
+				01384832176D9B2500AC9924 /* delta.png in Resources */,
+				01384833176D9B2500AC9924 /* fracture.png in Resources */,
+				01384834176D9B2500AC9924 /* geq.png in Resources */,
+				01384835176D9B2500AC9924 /* leq.png in Resources */,
+				01384836176D9B2500AC9924 /* line.png in Resources */,
+				01384837176D9B2500AC9924 /* neq.png in Resources */,
+				01384838176D9B2500AC9924 /* parallel.png in Resources */,
+				01384839176D9B2500AC9924 /* perpendicular.png in Resources */,
+				0138483A176D9B2500AC9924 /* pie.png in Resources */,
+				0138483B176D9B2500AC9924 /* power.png in Resources */,
+				0138483C176D9B2500AC9924 /* ray.png in Resources */,
+				0138483D176D9B2500AC9924 /* segment.png in Resources */,
+				0138483E176D9B2500AC9924 /* shape_circle.png in Resources */,
+				0138483F176D9B2500AC9924 /* shape_doodlee.png in Resources */,
+				01384840176D9B2500AC9924 /* shape_elipse.png in Resources */,
+				01384841176D9B2500AC9924 /* shape_rectangle.png in Resources */,
+				01384842176D9B2500AC9924 /* shape_triangle.png in Resources */,
+				01384843176D9B2500AC9924 /* sym_keyboard_delete.png in Resources */,
+				01384844176D9B2500AC9924 /* sym_keyboard_done.png in Resources */,
+				01384845176D9B2500AC9924 /* sym_keyboard_return.png in Resources */,
+				01384846176D9B2500AC9924 /* sym_keyboard_search.png in Resources */,
+				01384847176D9B2500AC9924 /* sym_keyboard_shift.png in Resources */,
+				01384848176D9B2500AC9924 /* sym_keyboard_space.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +571,7 @@
 				013847FD1769B83E00AC9924 /* aszMathInputView.m in Sources */,
 				013848001769BAC300AC9924 /* aszUIButton.m in Sources */,
 				0138480A1769E0C100AC9924 /* aszMathInputAccessoryView.m in Sources */,
+				01384815176D90F700AC9924 /* aszMathInputView2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

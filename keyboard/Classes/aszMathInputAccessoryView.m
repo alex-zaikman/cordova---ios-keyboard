@@ -60,5 +60,8 @@
      [self.delegate insertText:@"aszMathInputView"];
 }
 
+- (IBAction)custom2:(id)sender {
+    [self.delegate insertText:@"aszMathInputView2"];
+}
 
 @end
